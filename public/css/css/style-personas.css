@@ -1,0 +1,27 @@
+
+.card{
+    margin:10px;
+}
+
+#imagen-persona{
+    margin: 10px;
+    width: 100px;
+    display: flex;
+}
+
+#imagen-persona p{
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+#personas-mapa{
+    margin-top: 40px;
+    display: flex;
+}
+.mapa{
+    width: 2000px;
+}
+.mapa iframe {
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+   }

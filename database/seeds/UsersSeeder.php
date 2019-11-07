@@ -29,7 +29,7 @@ class UsersSeeder extends Seeder
             $user->name = $faker->name;
             $user->email = $faker->unique()->email;
             $user->password = Hash::make('12345678');
-            $user->phone = $faker->phoneNumber;
+            $user->phone = $faker->e164PhoneNumber;
             $user->cellphone = $faker->tollFreePhoneNumber;
             $user->age = $faker->numberBetween(18,80);
             $user->last_name = $faker->lastname;

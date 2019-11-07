@@ -13,12 +13,21 @@ class CreateServiceTable extends Migration
      */
     public function up()
     {
-        Schema::create('service', function (Blueprint $table) {
+        Schema::create('services', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table -> string('description');
+            $table ->string('description');
             $table->timestamps();
             
+        });
+        Schema::create('service_user', function (Blueprint $table) {
+            $table->integer('service_id')->unsigned();
+            $table->integer('user_id')->unsigned();
+            
+            //relacion de llaves foraneas
+            $table->foreign('service_id')->references('id')->on('services')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
+
         });
     }
 
@@ -30,5 +39,6 @@ class CreateServiceTable extends Migration
     public function down()
     {
         Schema::dropIfExists('service');
+        Schema::dropIfExists('service_user');
     }
 }

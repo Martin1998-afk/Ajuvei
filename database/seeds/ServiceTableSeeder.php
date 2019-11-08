@@ -1,9 +1,10 @@
 <?php
-use Faker\Factory as Faker;
+
 use App\Service;
+use Faker\Factory as Faker;
 use Illuminate\Database\Seeder;
 
-class ServiceSeeders extends Seeder
+class ServiceTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -18,9 +19,7 @@ class ServiceSeeders extends Seeder
             $service->name = $faker->name;
             $service->description = $faker->text;
             $service->save();
-
         }
-        
-
+        //
     }
 }

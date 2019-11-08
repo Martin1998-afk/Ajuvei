@@ -16,7 +16,7 @@ class ServiceTableSeeder extends Seeder
         $faker = Faker::create();
         for($i=0; $i < 5; $i++){
             $service = new Service();
-            $service->name = $faker->name;
+            $service->name = $faker->word;
             $service->description = $faker->text;
             $service->save();
         }

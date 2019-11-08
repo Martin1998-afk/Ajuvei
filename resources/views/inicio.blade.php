@@ -50,22 +50,23 @@
 
           <div class="col-12">
             <nav class="site-navigation text-right ml-auto " role="navigation">
-                <form action="">
-              <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
-                <li><a href="#home-section" class="nav-link">Inicio</a></li>
-                <li><a href="#about-section" class="nav-link">¿Quienes somos?</a></li>
+              <form action="">
+                <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+                  <li><a href="#home-section" class="nav-link">Inicio</a></li>
+                  <li><a href="#about-section" class="nav-link">¿Quienes somos?</a></li>
 
 
-                <li>
-                  <a href="#services-section" class="nav-link">Servicios</a>
+                  <li>
+                    <a href="#services-section" class="nav-link">Servicios</a>
 
-                </li>
-                
-                 
-                 <a href="{{ url('login') }}" class="btn btn-primary btn-lg" role="button" aria-pressed="true">Log In</a>
-                
-            </ul>
-        </form>
+                  </li>
+
+
+                  <a href="{{ url('login') }}" class="btn btn-primary btn-lg" role="button" aria-pressed="true">Log
+                    In</a>
+
+                </ul>
+              </form>
             </nav>
 
           </div>
@@ -86,25 +87,22 @@
               <h1>Encuentra profesionales de confianza:</h1>
               <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus dolorem eius eligendi
                 esse quod?</p>
-              <form id="buscador">
+              <form id="buscador" {{-- action="{{ route('service.show',['service'=>$service]) }}" method="GET" --}}>
                 <div class="form-group d-flex">
                   <!-- Example single danger button -->
                   <div class="btn-group">
-                    <button  type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
                       aria-haspopup="true" aria-expanded="false">
                       ¿Que servicio buscas?
                     </button>
                     <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">Gruas</a>
-                      <a class="dropdown-item" href="#">Cerrajero</a>
-                      <a class="dropdown-item" href="#">Electricidad</a>
-                      <a class="dropdown-item" href="#">Plomeria</a>
-                      <a class="dropdown-item" href="#">Carpintero</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Otros</a>
+                      @foreach ($services as $service)
+                      <a class="dropdown-item" href="#">{{ $service->name }}</a>
+                      @endforeach
                     </div>
                   </div>
-                  <a href="{{ url('personas') }}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Buscar</a>
+                  <a href="{{ url('service') }}" class="btn btn-primary btn-lg active" role="button"
+                    aria-pressed="true">Buscar</a>
                 </div>
               </form>
             </div>
@@ -145,7 +143,7 @@
 
     </div>
 
-   
+
 
 
 
@@ -156,8 +154,8 @@
           <div class="col-md-7 text-center">
             <div class="block-heading-1" data-aos="fade-up" data-aos-delay="">
               <h2>¿Quienes somos?</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Voluptate magnam aut explicabo sapiente labore molestiae libero beatae 
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptate magnam aut explicabo sapiente labore molestiae libero beatae
                 sed alias nam praesentium dolorum ut, aperiam officiis dolores dolore dolor eaque tempora!</p>
             </div>
           </div>
@@ -190,39 +188,15 @@
           </div>
         </div>
         <div class="owl-carousel owl-all">
+          @foreach ($services as $service)
           <div class="block__35630 text-center">
             <div class="icon mb-0">
               <span class="flaticon-ferry"></span>
             </div>
-            <h3 class="mb-3">Cocina</h3>
-            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. </p>
+            <h3 class="mb-3">{{ $service->name }}</h3>
+            <p>{{ $service->description }}</p>
           </div>
-
-          <div class="block__35630 text-center">
-            <div class="icon mb-0">
-              <span class="flaticon-airplane"></span>
-            </div>
-            <h3 class="mb-3">Electricidad</h3>
-            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. </p>
-          </div>
-
-          <div class="block__35630 text-center">
-            <div class="icon mb-0">
-              <span class="flaticon-box"></span>
-            </div>
-            <h3 class="mb-3">Plomería</h3>
-            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. </p>
-          </div>
-
-          <div class="block__35630 text-center">
-            <div class="icon mb-0">
-              <span class="flaticon-warehouse"></span>
-            </div>
-            <h3 class="mb-3">Otros</h3>
-            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. </p>
-          </div>
-
-
+          @endforeach
         </div>
       </div>
     </div>
@@ -250,7 +224,7 @@
           </div>
           <div class="col-md-4 ml-auto">
 
-          
+
 
 
             <h2 class="footer-heading mb-4">Contacto</h2>

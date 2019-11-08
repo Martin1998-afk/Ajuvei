@@ -11,20 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('inicio');
-});
+Route::resource('/service','ServiceController')->middleware('auth');
 
-Route::get('login', function () {
-   return view('login');
-});
-
-Route::get('personas',function(){
-    return view('personas');
-});
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index');
 
 //Route::get('/','Controller@getData');
 

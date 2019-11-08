@@ -62,8 +62,7 @@
                   </li>
 
 
-                  <a href="{{ url('login') }}" class="btn btn-primary btn-lg" role="button" aria-pressed="true">Log
-                    In</a>
+                  <a href="{{ url('login') }}" class="btn btn-primary btn-lg" role="button" aria-pressed="true">Iniciar Sesion</a>
 
                 </ul>
               </form>

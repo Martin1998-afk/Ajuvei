@@ -24,13 +24,13 @@ class CreateServiceTable extends Migration
         Schema::create('service_users', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('service_id')->unsigned();
-            $table->integer('user_id')->unsigned();
+            $table->integer('users_id')->unsigned();
             $table->boolean('active');
             $table->timestamps();
             
             //relacion de llaves foraneas
             $table->foreign('service_id')->references('id')->on('services')->onUpdate('cascade')->onDelete('cascade');
-            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('users_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
 
         });
     }

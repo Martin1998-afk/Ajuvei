@@ -40,6 +40,10 @@ class CreateServiceTable extends Migration
     public function down()
     {
         Schema::dropIfExists('service_users');
+        DB::statement('SET FOREIGN_KEY_CHECKS = 0');
         Schema::dropIfExists('services');
+        DB::statement('SET FOREIGN_KEY_CHECKS = 1');    
+        
+        
     }
 }

@@ -17,6 +17,7 @@ class EntrustSetupTables extends Migration
             $table->string('name',150)->unique();
             $table->string('display_name')->nullable();
             $table->string('description')->nullable();
+            $table->boolean('active');
             $table->timestamps();
         });
 
@@ -39,6 +40,7 @@ class EntrustSetupTables extends Migration
             $table->string('name',150)->unique();
             $table->string('display_name')->nullable();
             $table->string('description')->nullable();
+            $table->boolean('active');
             $table->timestamps();
         });
 

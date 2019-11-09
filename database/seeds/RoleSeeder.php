@@ -17,6 +17,7 @@ class RoleSeeder extends Seeder
         $admin->name         = 'admin';
         $admin->display_name = 'User Administrator'; // optional
         $admin->description  = 'User is allowed to manage and edit other users'; // optional
+        $admin->active = true;
         $admin->save();
 
         $user = User::where('name', '=', 'administrador')->firstOrFail();
@@ -26,6 +27,7 @@ class RoleSeeder extends Seeder
         $viewer->name         = 'viewer';
         $viewer->display_name = 'User viewer'; // optional
         $viewer->description  = 'User is only allowed to view'; // optional
+        $viewer->active = true;
         $viewer->save();
 
         for($i = 2; $i < 3; $i++){

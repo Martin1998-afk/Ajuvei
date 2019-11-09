@@ -19,11 +19,12 @@ class ServiceUsersSeeders extends Seeder
         $faker = Faker::create();
         $users = sizeof($users);
         $services = sizeof($services);
-        $r = random_int(1,10);
+        $r = random_int(1,20);
         for ($i=0; $i < $r; $i++) { 
             $relation = new ServiceUser();
-            $relation->service_id = $faker->numberBetween(1,$users);
-            $relation->user_id = $faker->numberBetween(1,$services);
+            $relation->service_id = $faker->numberBetween(1,$services);
+            $relation->user_id = $faker->numberBetween(1,$users);
+            $relation->active = true;
             $relation->save();
         }
     }

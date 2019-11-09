@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Service;
+use App\ServiceUser;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class ServiceController extends Controller
 {
@@ -13,6 +17,8 @@ class ServiceController extends Controller
      */
     public function index()
     {
+        $services = Service::all();
+        return $services;
         //
     }
 
@@ -23,6 +29,7 @@ class ServiceController extends Controller
      */
     public function create()
     {
+        return view('create');
         //
     }
 
@@ -34,6 +41,14 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
+        $service = new Service();
+        $service->name = $request->name;
+        $service->description = $request->description;
+        $service->save();
+
+        $servuser = new ServiceUser();
+        $servuser->service_id = $service->id;
+        $servuser->user_id = Auth::user()->id;
         //
     }
 
@@ -45,6 +60,14 @@ class ServiceController extends Controller
      */
     public function show($id)
     {
+        $s = DB::table('service_users')
+            ->select('*')
+            ->leftJoin('services', 'services.id', '=', 'service_users.service_id')
+            ->leftJoin('users', 'users.id', '=', 'service_users.user_id')
+            ->where('service_users.service_id','=',$id)
+            ->get();
+
+        return $s;
         //
     }
 

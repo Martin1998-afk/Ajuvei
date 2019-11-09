@@ -18,6 +18,7 @@ class PermissionSeeder extends Seeder
         $editSlot->display_name = 'Edit Slots'; // optional
         // Allow a Slot to...
         $editSlot->description  = 'Edit existing Slots'; // optional
+        $editSlot->active = true;
         $editSlot->save();
         
         $admin = Role::where('name','=','admin')->first();
@@ -28,6 +29,7 @@ class PermissionSeeder extends Seeder
         $viewSlot->display_name = 'View Slots'; // optional
         // Allow a Slot to...
         $viewSlot->description  = 'View existing Slots'; // optional
+        $viewSlot->active = true;
         $viewSlot->save();
 
         $viewer = Role::where('name','=','viewer')->first();

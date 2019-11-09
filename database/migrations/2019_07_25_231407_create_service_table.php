@@ -17,12 +17,15 @@ class CreateServiceTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table ->string('description');
+            $table->boolean('active');
             $table->timestamps();
             
         });
         Schema::create('service_users', function (Blueprint $table) {
+            $table->increments('id');
             $table->integer('service_id')->unsigned();
             $table->integer('user_id')->unsigned();
+            $table->boolean('active');
             $table->timestamps();
             
             //relacion de llaves foraneas

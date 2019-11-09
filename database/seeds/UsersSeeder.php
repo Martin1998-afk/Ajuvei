@@ -22,6 +22,7 @@ class UsersSeeder extends Seeder
         $user->cellphone = "8331479835";
         $user->age = "21";
         $user->last_name = "Maestro";
+        $user->active = true;
         $user->save();
 
         for ($i=0; $i < 5; $i++) {
@@ -33,6 +34,7 @@ class UsersSeeder extends Seeder
             $user->cellphone = $faker->tollFreePhoneNumber;
             $user->age = $faker->numberBetween(18,80);
             $user->last_name = $faker->lastname;
+            $user->active = true;
             $user->save();
         }
     }

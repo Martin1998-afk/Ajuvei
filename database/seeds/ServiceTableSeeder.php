@@ -18,6 +18,7 @@ class ServiceTableSeeder extends Seeder
             $service = new Service();
             $service->name = $faker->word;
             $service->description = $faker->text;
+            $service->active = true;
             $service->save();
         }
         //

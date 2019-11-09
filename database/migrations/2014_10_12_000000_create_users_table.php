@@ -24,6 +24,7 @@ class CreateUsersTable extends Migration
             $table->integer('age');
             $table->string('service')->nullable();
             $table->string('last_name');
+            $table->boolean('active');
             $table->rememberToken();
             $table->timestamps();
         });

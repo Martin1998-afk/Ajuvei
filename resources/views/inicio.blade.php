@@ -61,10 +61,35 @@
 
                   </li>
 
+                  @guest
+                  @if (Route::has('register'))
+                  <a href="{{ route('login') }}" class="btn btn-primary btn-lg" role="button"
+                    aria-pressed="true">Iniciar
+                    sesión</a>
+                  <a class="btn btn-primary btn-lg" role="button" aria-pressed="true"
+                    href="{{ route('register') }}">Registrarse</a>
+                  @endif
+                  @else
+                  <a href="{{ url('anuncio') }}" class="btn btn-primary btn-lg" role="button" aria-pressed="true">Crear
+                    anuncio</a>
+                  <li class="nav-item dropdown">
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                      {{ Auth::user()->name }} <span class="caret"></span>
+                    </a>
 
-                  <a href="{{ url('login') }}" class="btn btn-primary btn-lg" role="button" aria-pressed="true">Iniciar sesión</a>
-                  <a href="{{ url('anuncio') }}" class="btn btn-primary btn-lg" role="button" aria-pressed="true">Crear anuncio</a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                        Cerrar sesion
+                      </a>
 
+                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                      </form>
+                    </div>
+                  </li>
+                  @endguest
                 </ul>
               </form>
             </nav>
@@ -87,7 +112,7 @@
               <h1>Encuentra profesionales de confianza:</h1>
               <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus dolorem eius eligendi
                 esse quod?</p>
-              <form id="buscador" {{-- action="{{ route('service.show',['service'=>$service]) }}" method="GET" --}}>
+              <div id="buscador">
                 <div class="form-group d-flex">
                   <!-- Example single danger button -->
                   <div class="btn-group">
@@ -97,14 +122,15 @@
                     </button>
                     <div class="dropdown-menu">
                       @foreach ($services as $service)
-                      <a class="dropdown-item" href="#">{{ $service->name }}</a>
+                      <a class="dropdown-item"
+                        href="{{ route('service.show',['id'=>$service->id]) }}">{{ $service->name }}</a>
                       @endforeach
                     </div>
                   </div>
                   <a href="{{ route('service.index') }}" class="btn btn-primary btn-lg active" role="button"
                     aria-pressed="true">Buscar</a>
                 </div>
-              </form>
+              </div>
             </div>
           </div>
         </div>

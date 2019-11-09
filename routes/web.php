@@ -15,6 +15,8 @@ Route::resource('/service','ServiceController')->middleware('auth');
 
 Auth::routes();
 
+Route::view('/anuncio','anuncio');
+
 Route::get('/', 'HomeController@index');
 
 //Route::get('/','Controller@getData');

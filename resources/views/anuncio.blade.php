@@ -73,11 +73,11 @@
         <input type="email" name="email"><br>
         Que servicio va a proveer?:<br>
         <select>
-            <option value="plomero">Plomero</option>
-            <option value="electricista">Electricista</option>
-            <option value="gruas">Gruas</option>
-            <option value="cerrajero">Cerrajero</option>
-            <option value="carpintero">Carpinteria</option>
+            <option value="1">Plomero</option>
+            <option value="2">Electricista</option>
+            <option value="3">Pintor</option>
+            <option value="4">Cerrajero</option>
+            <option value="5">Carpinteria</option>
         </select><br>
         Numero telefonico:<br>
         <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="(833)(***)(***)"><br>

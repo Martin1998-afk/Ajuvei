@@ -63,7 +63,7 @@
 
 
                   <a href="{{ url('login') }}" class="btn btn-primary btn-lg" role="button" aria-pressed="true">Iniciar sesión</a>
-                  <a href="{{ url('login') }}" class="btn btn-primary btn-lg" role="button" aria-pressed="true">Crear anuncio</a>
+                  <a href="{{ url('anuncio') }}" class="btn btn-primary btn-lg" role="button" aria-pressed="true">Crear anuncio</a>
 
                 </ul>
               </form>
@@ -101,7 +101,7 @@
                       @endforeach
                     </div>
                   </div>
-                  <a href="{{ url('service') }}" class="btn btn-primary btn-lg active" role="button"
+                  <a href="{{ route('service.index') }}" class="btn btn-primary btn-lg active" role="button"
                     aria-pressed="true">Buscar</a>
                 </div>
               </form>

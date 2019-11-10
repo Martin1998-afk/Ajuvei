@@ -68,7 +68,7 @@
                   href="{{ route('register') }}">Registrarse</a>
                 @endif
                 @else
-                <a href="{{ url('anuncio') }}" class="btn btn-primary btn-lg" role="button" aria-pressed="true">Crear
+                <a href="{{ route('service.create') }}" class="btn btn-primary btn-lg" role="button" aria-pressed="true">Crear
                   anuncio</a>
                 <li class="nav-item dropdown">
                   <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"

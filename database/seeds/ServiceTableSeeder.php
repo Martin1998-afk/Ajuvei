@@ -13,10 +13,11 @@ class ServiceTableSeeder extends Seeder
      */
     public function run()
     {
+        $arrayserv = ["Plomero","Electricista","Pintor","Cerrajero","Carpinteria"];
         $faker = Faker::create();
         for($i=0; $i < 5; $i++){
             $service = new Service();
-            $service->name = $faker->word;
+            $service->name = $arrayserv[$i];
             $service->description = $faker->text;
             $service->active = true;
             $service->save();

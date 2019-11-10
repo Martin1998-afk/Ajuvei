@@ -9,18 +9,15 @@
 
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/fonts/icomoon/style.css">
-
-  <link rel="stylesheet" href="css/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/css/jquery.fancybox.min.css">
-  <link rel="stylesheet" href="css/css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="css/fonts/flaticon/font/flaticon.css">
-  <link rel="stylesheet" href="css/css/aos.css">
+  <link rel="stylesheet" href="{{ asset('css/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/css/jquery.fancybox.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/css/owl.carousel.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/css/owl.theme.default.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/css/aos.css') }}">
 
   <!-- MAIN CSS -->
-  <link rel="stylesheet" href="css/css/style.css">
-  <link rel="stylesheet" href="css/css/style-personas.css">
+  <link rel="stylesheet" href="{{ asset('css/css/style.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/css/style-personas.css') }}">
 
 </head>
 
@@ -79,7 +76,7 @@
         <div id="personas">
         <div class="card" style="width: 45rem;">
             <div id="imagen-persona">
-            <img src="css/images/pp (2).jpg" class="card-img-top" alt="...">
+            <img src="{{ asset('css/images/pp2.jpg') }}" class="card-img-top" alt="...">
             <p>$$$</p>
         </div>
             <div class="card-body">
@@ -90,7 +87,7 @@
         </div>
         <div class="card" style="width: 45em;">
         <div id="imagen-persona">
-        <img src="css/images/pp (1).jpg" class="card-img-top" alt="...">
+        <img src="{{ asset('css/images/pp1.jpg') }}" class="card-img-top" alt="...">
         <p>$$$</p>
         </div>
         <div class="card-body">
@@ -101,7 +98,7 @@
       </div>
       <div class="card" style="width: 45rem;">
         <div id="imagen-persona">
-            <img src="css/images/pp.jpg" class="card-img-top" alt="...">
+            <img src="{{ asset('css/images/pp.jpg') }}" class="card-img-top" alt="...">
             <p>$$$</p>
         </div>
         <div class="card-body">
@@ -155,18 +152,18 @@
     </footer>
   </div>
 
-  <script src="css/js/jquery-3.3.1.min.js"></script>
-  <script src="css/js/popper.min.js"></script>
-  <script src="css/js/bootstrap.min.js"></script>
-  <script src="css/js/owl.carousel.min.js"></script>
-  <script src="css/js/jquery.sticky.js"></script>
-  <script src="css/js/jquery.waypoints.min.js"></script>
-  <script src="css/js/jquery.animateNumber.min.js"></script>
-  <script src="css/js/jquery.fancybox.min.js"></script>
-  <script src="css/js/jquery.easing.1.3.js"></script>
-  <script src="css/js/aos.js"></script>
+  <script src="{{ asset('css/js/jquery-3.3.1.min.js') }}"></script>
+  <script src="{{ asset('css/js/popper.min.js') }}"></script>
+  <script src="{{ asset('css/js/bootstrap.min.js') }}"></script>
+  <script src="{{ asset('css/js/owl.carousel.min.js') }}"></script>
+  <script src="{{ asset('css/js/jquery.sticky.js') }}"></script>
+  <script src="{{ asset('css/js/jquery.waypoints.min.js') }}"></script>
+  <script src="{{ asset('css/js/jquery.animateNumber.min.js') }}"></script>
+  <script src="{{ asset('css/js/jquery.fancybox.min.js') }}"></script>
+  <script src="{{ asset('css/js/jquery.easing.1.3.js') }}"></script>
+  <script src="{{ asset('css/js/aos.js') }}"></script>
 
-  <script src="css/js/main.js"></script>
+  <script src="{{ asset('css/js/main.js') }}"></script>
 
 
 </body>

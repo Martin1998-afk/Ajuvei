@@ -15,6 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/css/style.css">
+    <link rel="stylesheet" href="css/css/style-anuncio.css">
     <title>Registro de Prestamista</title>
 </head>
 
@@ -73,6 +74,7 @@
       </div>
 
     </header>
+    <div class=anuncio>
     <form>
         Nombre/s:<br>
         <input type="text" name="nombre"><br>
@@ -105,6 +107,7 @@
         <input type="number" name="cp"min="5" max="5"><br>
         <input type="submit"value="Registrar"> <br>
     </form>
+    </div>
 
     <script src="css/js/jquery-3.3.1.min.js"></script>
   <script src="css/js/popper.min.js"></script>

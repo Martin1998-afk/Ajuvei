@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/fonts/icomoon/style.css">
+
+<link rel="stylesheet" href="css/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/css/jquery.fancybox.min.css">
+<link rel="stylesheet" href="css/css/owl.carousel.min.css">
+<link rel="stylesheet" href="css/css/owl.theme.default.min.css">
+<link rel="stylesheet" href="/fonts/flaticon/font/flaticon.css">
+<link rel="stylesheet" href="../css/aos.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -95,5 +105,18 @@
         <input type="number" name="cp"min="5" max="5"><br>
         <input type="submit"value="Registrar"> <br>
     </form>
+
+    <script src="css/js/jquery-3.3.1.min.js"></script>
+  <script src="css/js/popper.min.js"></script>
+  <script src="css/js/bootstrap.min.js"></script>
+  <script src="css/js/owl.carousel.min.js"></script>
+  <script src="css/js/jquery.sticky.js"></script>
+  <script src="css/js/jquery.waypoints.min.js"></script>
+  <script src="css/js/jquery.animateNumber.min.js"></script>
+  <script src="css/js/jquery.fancybox.min.js"></script>
+  <script src="css/js/jquery.easing.1.3.js"></script>
+  <script src="css/js/aos.js"></script>
+
+  <script src="css/js/main.js"></script>
   </body>
 </html>

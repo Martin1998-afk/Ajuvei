@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Service;
 use App\ServiceUser;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
@@ -18,7 +19,8 @@ class ServiceController extends Controller
     public function index()
     {
         $services = Service::all();
-        return $services;
+        $users = User::all();
+        return [$services,$users];
         //
     }
 
@@ -29,7 +31,7 @@ class ServiceController extends Controller
      */
     public function create()
     {
-        return view('create');
+        return view('anuncio');
         //
     }
 

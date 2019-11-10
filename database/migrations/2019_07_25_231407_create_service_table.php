@@ -21,18 +21,20 @@ class CreateServiceTable extends Migration
             $table->timestamps();
             
         });
+
         Schema::create('service_users', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('service_id')->unsigned();
-            $table->integer('prestamista_id')->unsigned();
+            $table->integer('user_id')->unsigned();
             $table->boolean('active');
             $table->timestamps();
             
             //relacion de llaves foraneas
             $table->foreign('service_id')->references('id')->on('services')->onUpdate('cascade')->onDelete('cascade');
-            $table->foreign('prestamista_id')->references('id')->on('prestamistas')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
 
         });
+       
     }
 
     /**
@@ -46,7 +48,5 @@ class CreateServiceTable extends Migration
         DB::statement('SET FOREIGN_KEY_CHECKS = 0');
         Schema::dropIfExists('services');
         DB::statement('SET FOREIGN_KEY_CHECKS = 1');    
-        
-        
     }
 }

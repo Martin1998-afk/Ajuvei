@@ -4,6 +4,7 @@
 <body>
   <div class=anuncio>
     <form action="{{ route('service.store') }}" method="POST">
+      {{{ csrf_field()}}}
       Nombre/s:<br>
       <input type="text" name="nombre"><br>
       Apellido Paterno:<br>
@@ -25,7 +26,7 @@
       Dirección de su lugar de trabajo<br>
       <textarea name="direccion" cols="58" rows="4"></textarea>
       Codigo postal:<br>
-      <input type="number" name="cp" min="5" max="5"><br>
+      <input type="number" name="cp" min="5" max="10000"><br>
       <input type="submit" value="Registrar"> <br>
     </form>
   </div>

@@ -16,7 +16,7 @@ class ServiceController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($services)
     {
         $services = Service::all();
         $users = User::all();
@@ -44,7 +44,6 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
-        return $request;
         /* $service = new Service();
         $service->name = $request->name;
         $service->description = $request->description;
@@ -62,16 +61,18 @@ class ServiceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($prestamistas,$id)
     {
-        $s = DB::table('service_users')
-            ->select('*')
-            ->leftJoin('services', 'services.id', '=', 'service_users.service_id')
-            ->leftJoin('users', 'users.id', '=', 'service_users.user_id')
-            ->where('service_users.service_id','=',$id)
-            ->get();
+        $service = Service::find($id);
+        return view("service.show",["service"=>$service]);
+        //$s = DB::table('service_users')
+          //  ->select('*')
+            //->leftJoin('services', 'services.id', '=', 'service_users.service_id')
+            //->leftJoin('users', 'users.id', '=', 'service_users.user_id')
+            //->where('service_users.service_id','=',$id)
+            //->get();
 
-        return $s;
+        //return $s;
         //
     }
 

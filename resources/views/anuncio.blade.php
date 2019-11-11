@@ -25,12 +25,7 @@
       Descripción: <br>
       <input type="text" name="descripcion" placeholder="Describir su manera de trabajar"><br>
       Dirección de su lugar de trabajo<br>
-      Colonia:<br>
-      <input type="text" name="colonia"><br>
-      Calle:<br>
-      <input type="text" name="calle"><br>
-      Numero Exterior: <br>
-      <input type="number" name="num"><br>
+      <textarea name="direccion" cols="58" rows="4"></textarea>
       Codigo postal:<br>
       <input type="number" name="cp" min="5" max="5"><br>
       <input type="submit" value="Registrar"> <br>

@@ -16,7 +16,7 @@ class ServiceController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($services)
+    public function index()
     {
         $services = Service::all();
         $users = User::all();
@@ -61,7 +61,7 @@ class ServiceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($prestamistas,$id)
+    public function show($id)
     {
         $service = Service::find($id);
         return view("service.show",["service"=>$service]);

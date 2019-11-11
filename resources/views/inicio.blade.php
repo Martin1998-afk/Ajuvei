@@ -139,7 +139,7 @@
             <div class="service text-center">
               <a href="#"><img src="css/images/1.jpg" alt="Image" class="img-fluid"></a>
               <div class="px-md-3">
-                <h3><a href="#">frase chida</a></h3>
+                <h3><a href="#">Servicios para el hogar</a></h3>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae distinctio laudantium nulla eos
                   numquam incidunt!</p>
               </div>
@@ -147,7 +147,7 @@
             <div class="service text-center">
               <a href="#"><img src="css/images/2.jpg" alt="Image" class="img-fluid"></a>
               <div class="px-md-3">
-                <h3><a href="#">frase chida</a></h3>
+                <h3><a href="#">Electricistas</a></h3>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae distinctio laudantium nulla eos
                   numquam incidunt!</p>
               </div>
@@ -155,7 +155,7 @@
             <div class="service text-center">
               <a href="#"><img src="css/images/3.jpg" alt="Image" class="img-fluid"></a>
               <div class="px-md-3">
-                <h3><a href="#">frase chida</a></h3>
+                <h3><a href="#">Servicios de grúas</a></h3>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae distinctio laudantium nulla eos
                   numquam incidunt!</p>
               </div>

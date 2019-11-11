@@ -20,7 +20,7 @@ class ServiceController extends Controller
     {
         $services = Service::all();
         $users = User::all();
-        return [$services,$users];
+        return view('servicios',['services' => $services,'users' => $users]);
         //
     }
 
@@ -31,7 +31,8 @@ class ServiceController extends Controller
      */
     public function create()
     {
-        return view('anuncio');
+        $services = Service::all();
+        return view('anuncio',['services' => $services]);
         //
     }
 
@@ -43,14 +44,15 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
-        $service = new Service();
+        return $request;
+        /* $service = new Service();
         $service->name = $request->name;
         $service->description = $request->description;
         $service->save();
 
         $servuser = new ServiceUser();
         $servuser->service_id = $service->id;
-        $servuser->user_id = Auth::user()->id;
+        $servuser->user_id = Auth::user()->id; */
         //
     }
 

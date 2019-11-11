@@ -3,7 +3,7 @@
 
 <body>
   <div class=anuncio>
-    <form action="" method="">
+    <form action="{{ route('service.store') }}" method="POST">
       Nombre/s:<br>
       <input type="text" name="nombre"><br>
       Apellido Paterno:<br>
@@ -14,14 +14,12 @@
       <input type="email" name="email"><br>
       Que servicio va a proveer?:<br>
       <select>
-        <option value="1">Plomero</option>
-        <option value="2">Electricista</option>
-        <option value="3">Pintor</option>
-        <option value="4">Cerrajero</option>
-        <option value="5">Carpinteria</option>
+        @foreach ($services as $item)
+        <option value="{{ $item->id }}">{{ $item->name }}</option>
+        @endforeach
       </select><br>
-      Numero telefonico:<br>
-      <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="(833)(***)(***)"><br>
+      {{-- Numero telefonico:<br>
+      <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="(833)(***)(***)"><br> --}}
       Descripción: <br>
       <input type="text" name="descripcion" placeholder="Describir su manera de trabajar"><br>
       Dirección de su lugar de trabajo<br>

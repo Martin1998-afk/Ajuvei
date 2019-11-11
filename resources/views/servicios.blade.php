@@ -112,8 +112,6 @@
         <iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118153.93589804425!2d-97.93952600110909!3d22.266225138406092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d7fd8bfcfe2d1f%3A0xc3189ac39db089e6!2sTampico%2C+Tamps.!5e0!3m2!1ses-419!2smx!4v1564684402103!5m2!1ses-419!2smx" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
   </div>         
-    
-
     <footer class="site-footer">
       <div class="container">
         <div class="row">

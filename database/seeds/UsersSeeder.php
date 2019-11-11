@@ -16,7 +16,6 @@ class UsersSeeder extends Seeder
         $faker = Faker::create();
         $user = new User();
         $user->name = "administrador";
-        $user->last_name = "Maestro";
         $user->email = "admin@une.edu.mx";
         $user->password = Hash::make('12345678');
         $user->phone = "2154156";
@@ -28,12 +27,13 @@ class UsersSeeder extends Seeder
         for ($i=0; $i < 5; $i++) {
             $user = new User();
             $user->name = $faker->name;
-            $user->last_name = $faker->lastName;
             $user->email = $faker->unique()->email;
             $user->password = Hash::make('12345678');
             $user->phone = $faker->e164PhoneNumber;
             $user->cellphone = $faker->tollFreePhoneNumber;
             $user->age = $faker->numberBetween(18,80);
+            $user->description = $faker->text($maxNbChars = 200);
+            $user->address = $faker->address();
             $user->active = true;
             $user->save();
         }

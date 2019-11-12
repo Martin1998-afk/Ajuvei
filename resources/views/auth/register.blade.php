@@ -79,9 +79,9 @@
                             <label for="cell_phone" class="col-md-4 col-form-label text-md-right">(Opcional){{ __('Teléfono celular') }}</label>
 
                             <div class="col-md-6">
-                                <input id="cell_phone" type="tel" class="form-control @error('cell_phone') is-invalid @enderror" name="cell_phone" autocomplete="cell_phone">
+                                <input id="cellphone" type="tel" class="form-control @error('cellphone') is-invalid @enderror" name="cellphone" autocomplete="cellphone">
 
-                                @error('cell_phone')
+                                @error('cellphone')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

@@ -74,14 +74,16 @@
     </header>
     <div id="personas-mapa">
         <div id="personas">
+        <form id = "contact" action="{{'service.show'}}"method="POST">
+          @csrf
         <div class="card" style="width: 45rem;">
             <div id="imagen-persona">
             <img src="{{ asset('css/images/pp2.jpg') }}" class="card-img-top" alt="...">
             <p>$$$</p>
         </div>
             <div class="card-body">
-            <h5 class="card-title">dawdsda</h5>
-            <p class="card-text">sdawdw</p>
+            <h5 class="card-title">Fulano 1</h5>
+            <p class="card-text">adfefad</p>
             <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
         </div>
@@ -107,6 +109,7 @@
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>
+          </form>
     </div>
     
     <div class="mapa">

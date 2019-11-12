@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\prestamistas;
+use App\Service; 
 use Illuminate\Http\Request;
+Use Illuminate\Support\Facades\View;
 
 class PrestamistasController extends Controller
 {
@@ -14,8 +16,8 @@ class PrestamistasController extends Controller
      */
     public function index()
     {
-       $prestamistas = prestamistas::all();
-       return View::make(prestamistas.index)->with('prestamistas',$prestamistas);
+       //$prestamistas = prestamistas::all();
+      // return View::make(prestamistas.index)->with('prestamistas',$prestamistas);
     }
 
     /**
@@ -44,7 +46,7 @@ class PrestamistasController extends Controller
         $prestamistas->cp = $request->cp;
         $prestamistas ->id = auth()->prestamista()->id;
         $prestamistas->save();
-        return view('/');
+        return view('/service');
     }
 
     /**
@@ -53,9 +55,10 @@ class PrestamistasController extends Controller
      * @param  \App\prestamistas  $prestamistas
      * @return \Illuminate\Http\Response
      */
-    public function show(prestamistas $prestamistas)
+    public function show(prestamistas $id)
     {
-        //
+        $prestamistas = prestamista::find($id);
+        return View::make("prestamistas.show")->with(compact('id'));
     }
 
     /**
@@ -66,7 +69,7 @@ class PrestamistasController extends Controller
      */
     public function edit(prestamistas $prestamistas)
     {
-        //
+        
     }
 
     /**

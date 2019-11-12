@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\prestamistas;
 use App\Service;
 use App\ServiceUser;
 use App\User;
@@ -44,9 +45,12 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
-        $service = new Service();
+        $service = new prestamistas();
         $service->name = $request->name;
+        $service->email = $request->email;
         $service->description = $request->description;
+        $service->address = $request->address;
+        $service->cp = $request->cp;
         $service->save();
 
         $servuser = new ServiceUser();
@@ -63,8 +67,8 @@ class ServiceController extends Controller
      */
     public function show($id)
     {
-        $service= Service::find($id);
-        return view("service.show",["service"=>$service]);
+        $service = prestamista::find($id);
+        return View::make("service.show")->with(compact('id'));
         //$s = DB::table('service_users')
           //  ->select('*')
             //->leftJoin('services', 'services.id', '=', 'service_users.service_id')

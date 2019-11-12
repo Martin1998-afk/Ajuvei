@@ -18,10 +18,10 @@
 <body>
   <div class="fondo">
   <div class=anuncio>
-    <form id="contact" action="{{ route('store')}}" method="POST">
+  <form id="contact" action="{{route('service.store')}}" method="POST">
      @csrf
       Nombre/s:<br>
-      <input type="text" name="nombre"><br>
+      <input type="text" name="name"><br>
       Correo Electrónico:<br>
       <input type="email" name="email"><br>
       Que servicio va a proveer?:<br>
@@ -33,9 +33,9 @@
       {{-- Numero telefonico:<br>
       <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="(833)(***)(***)"><br> --}}
       Descripción: <br>
-      <textarea name="descripcion"cols="auto" rows="4" placeholder="Describir su manera de trabajar"></textarea>
+      <textarea name="description"cols="auto" rows="4" placeholder="Describir su manera de trabajar"></textarea>
       <br>Dirección de su lugar de trabajo
-      <br><textarea name="direccion" cols="auto" rows="4"></textarea><br>
+      <br><textarea name="address" cols="auto" rows="4"></textarea><br>
       Codigo postal:<br>
       <input type="number" name="cp" min="5" max="10000"><br>
       <input class="boton btn btn-primary" type="submit" value="Registrar"> <br>

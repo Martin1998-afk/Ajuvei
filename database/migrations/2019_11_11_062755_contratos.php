@@ -21,7 +21,7 @@ class Contratos extends Migration
             $table->string('description');
             $table->string('address');
             $table->string('cp');
-            $table->boolean('active');
+            $table->boolean('active')->nullable();
             $table->timestamps();
         });
 

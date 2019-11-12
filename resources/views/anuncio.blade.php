@@ -3,7 +3,7 @@
 
 <body>
   <div class=anuncio>
-    <form action="{{ route('service.store')}}" method="POST">
+    <form action="{{ url('prestamistas.store')}}" method="POST">
      @csrf
       Nombre/s:<br>
       <input type="text" name="nombre"><br>

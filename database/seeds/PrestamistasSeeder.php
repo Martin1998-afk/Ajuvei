@@ -15,12 +15,15 @@ class PrestamistasSeeder extends Seeder
     public function run()
     {
         $faker = Faker::create();
-        for($i=0; $i<5; $i++){
+        for($i=0; $i < 5; $i++){
             $prestamista = new prestamistas();
             $prestamista->name = $faker->name;
             $prestamista->email = $faker->unique()->email;
             $prestamista->description = $faker->text($maxNbChars = 200);
             $prestamista->address = $faker->address();
+            $prestamista->cp = $faker->postcode;
+            $prestamista->active = true;
+            $prestamista->save();
 
         }
     }

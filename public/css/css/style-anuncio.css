@@ -1,3 +1,40 @@
+body{
+    margin:0%;
+    padding:0%;
+    background: url(../images/anuncio.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: black;
+}
+
 .anuncio{
+    color: black;
+    margin-top: 50px;
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    background-color: skyblue;
+}
+
+#contact{
+    background: #F9F9F9;
+  padding: 25px;
+  margin: 150px 0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+input{
+    width: 100%;
+}
+
+textarea{
+    width: 100%;
+}
+
+.boton{
+    margin-top: 20px;
+    border-radius: 8px;
+    background-color: #0A76E9;
     
 }

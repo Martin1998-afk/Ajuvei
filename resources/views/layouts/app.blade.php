@@ -42,7 +42,7 @@
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-blue shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-blue shadow-sm" style="background-color:white">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}" style="color:blue">AJUVEI
                 </a>
@@ -54,11 +54,7 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-                        <li><a href="{{ url('/') }}" class="nav-link">Inicio</a></li>
-                        <li><a href="#about-section" class="nav-link">¿Quienes somos?</a></li>
-
-                    </ul>
+                    
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">

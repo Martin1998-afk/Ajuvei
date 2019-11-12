@@ -36,15 +36,15 @@ class PrestamistasController extends Controller
      */
     public function store(Request $request)
     {
-        $prestamistas = new prestamistas();
-        $prestamistas ->name->$request ->name;
-        $prestamistas ->email->$request ->email;
-        $prestamistas ->description->$request ->description;
-        $prestamistas ->address->$request ->address;
-        $prestamistas ->cp->$request->cp;
+        $prestamistas = new prestamistas;
+        $prestamistas->name = $request->name;
+        $prestamistas->email = $request->email;
+        $prestamistas->description = $request->description;
+        $prestamistas->address = $request->address;
+        $prestamistas->cp = $request->cp;
         $prestamistas ->id = auth()->prestamista()->id;
-        $prestamistas ->save();
-        return redirect('/inicio');
+        $prestamistas->save();
+        return view('/');
     }
 
     /**

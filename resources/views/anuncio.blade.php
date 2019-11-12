@@ -18,7 +18,7 @@
 <body>
   <div class="fondo">
   <div class=anuncio>
-    <form id="contact" action="{{ url('prestamistas.store')}}" method="POST">
+    <form id="contact" action="{{ route('store')}}" method="POST">
      @csrf
       Nombre/s:<br>
       <input type="text" name="nombre"><br>

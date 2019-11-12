@@ -15,7 +15,7 @@ Route::resource('/service','ServiceController')->middleware('auth');
 
 Auth::routes();
 
-Route::resource('/anuncio','PrestamistasController')->middleware('auth');
+Route::resource('/anuncio','PrestamistasController@store')->name('store');
 
 Route::get('/', 'HomeController@index');
 

@@ -3,8 +3,8 @@
 
 <body>
   <div class=anuncio>
-    <form action="{{ route('service.store') }}" method="POST">
-      {{{ csrf_field()}}}
+    <form action="{{ route('service.store')}}" method="POST">
+     @csrf
       Nombre/s:<br>
       <input type="text" name="nombre"><br>
       Apellido Paterno:<br>

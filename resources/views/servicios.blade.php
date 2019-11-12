@@ -80,8 +80,8 @@
             <p>$$$</p>
         </div>
             <div class="card-body">
-            <h5 class="card-title">Fulano 1</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis suscipit reprehenderit numquam</p>
+            <h5 class="card-title">{{ $service->name }}</h5>
+            <p class="card-text">{{ $service->description }}</p>
             <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
         </div>

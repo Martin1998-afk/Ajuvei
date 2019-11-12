@@ -44,14 +44,14 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
-        /* $service = new Service();
+        $service = new Service();
         $service->name = $request->name;
         $service->description = $request->description;
         $service->save();
 
         $servuser = new ServiceUser();
         $servuser->service_id = $service->id;
-        $servuser->user_id = Auth::user()->id; */
+        $servuser->user_id = Auth::user()->id; 
         //
     }
 
@@ -63,7 +63,7 @@ class ServiceController extends Controller
      */
     public function show($id)
     {
-        $service = Service::find($id);
+        $service= Service::find($id);
         return view("service.show",["service"=>$service]);
         //$s = DB::table('service_users')
           //  ->select('*')

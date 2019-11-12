@@ -7,10 +7,6 @@
      @csrf
       Nombre/s:<br>
       <input type="text" name="nombre"><br>
-      Apellido Paterno:<br>
-      <input type="text" name="apellidoP"><br>
-      Apellido Materno:<br>
-      <input type="text" name="apellidoM"><br>
       Correo Electrónico:<br>
       <input type="email" name="email"><br>
       Que servicio va a proveer?:<br>
@@ -22,9 +18,9 @@
       {{-- Numero telefonico:<br>
       <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="(833)(***)(***)"><br> --}}
       Descripción: <br>
-      <input type="text" name="descripcion" placeholder="Describir su manera de trabajar"><br>
-      Dirección de su lugar de trabajo<br>
-      <textarea name="direccion" cols="58" rows="4"></textarea>
+      <textarea name="descripcion"cols="58" rows="4" placeholder="Describir su manera de trabajar"></textarea>
+      <br>Dirección de su lugar de trabajo
+      <br><textarea name="direccion" cols="58" rows="4"></textarea><br>
       Codigo postal:<br>
       <input type="number" name="cp" min="5" max="10000"><br>
       <input type="submit" value="Registrar"> <br>

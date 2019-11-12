@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Prestamista;
+use App\prestamistas;
 use Illuminate\Http\Request;
 
-class PrestamistaController extends Controller
+class PrestamistasController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class PrestamistaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Prestamista  $prestamista
+     * @param  \App\prestamistas  $prestamistas
      * @return \Illuminate\Http\Response
      */
-    public function show(Prestamista $prestamista)
+    public function show(prestamistas $prestamistas)
     {
         //
     }
@@ -52,10 +52,10 @@ class PrestamistaController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Prestamista  $prestamista
+     * @param  \App\prestamistas  $prestamistas
      * @return \Illuminate\Http\Response
      */
-    public function edit(Prestamista $prestamista)
+    public function edit(prestamistas $prestamistas)
     {
         //
     }
@@ -64,10 +64,10 @@ class PrestamistaController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Prestamista  $prestamista
+     * @param  \App\prestamistas  $prestamistas
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Prestamista $prestamista)
+    public function update(Request $request, prestamistas $prestamistas)
     {
         //
     }
@@ -75,10 +75,10 @@ class PrestamistaController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Prestamista  $prestamista
+     * @param  \App\prestamistas  $prestamistas
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Prestamista $prestamista)
+    public function destroy(prestamistas $prestamistas)
     {
         //
     }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Prestamistas extends Migration
+class CreatePrestamistasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,13 +14,7 @@ class Prestamistas extends Migration
     public function up()
     {
         Schema::create('prestamistas', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name');
-            $table->string('email',150)->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('description',500)->nullable();
-            $table->string('address')->nullable();
-            $table->boolean('active');
+            $table->bigIncrements('id');
             $table->timestamps();
         });
     }
@@ -32,6 +26,6 @@ class Prestamistas extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('prestamistas');
     }
 }

@@ -1,9 +1,11 @@
 <?php
 
-use App\Prestamista;
 use Illuminate\Database\Seeder;
+use Faker\Factory as Faker;
+use App\prestamistas;
 
-class PrestamistaSeeder extends Seeder
+
+class PrestamistasSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,7 +16,7 @@ class PrestamistaSeeder extends Seeder
     {
         $faker = Faker::create();
         for($i=0; $i<5; $i++){
-            $prestamista = new Prestamista();
+            $prestamista = new prestamistas();
             $prestamista->name = $faker->name;
             $prestamista->email = $faker->unique()->email;
             $prestamista->description = $faker->text($maxNbChars = 200);

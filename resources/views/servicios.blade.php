@@ -74,8 +74,15 @@
     </header>
     <div id="personas-mapa">
         <div id="personas">
-        <form id = "contact" action="{{'service.show'}}"method="POST">
+        <form id = "contact" action="{{route('prestamistas.index')}}"method="POST">
           @csrf
+          <div class="container">
+            <div class="card">
+            <div class="card-header">{{$prestamistas->name}}</div>
+            <div class="card-body"></div>
+            <div class="card-text">{{$prestamistas->description}}</div>
+            </div>
+          </div>
         <div class="card" style="width: 45rem;">
             <div id="imagen-persona">
             <img src="{{ asset('css/images/pp2.jpg') }}" class="card-img-top" alt="...">
@@ -83,8 +90,8 @@
         </div>
             <div class="card-body">
             <h5 class="card-title">Fulano 1</h5>
-            <p class="card-text">adfefad</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <p class="card-text">Opos Oponimus  </p>
+            <a href="{{ view('detalles-anuncio') }}" class="btn btn-primary">Go somewhere</a>
         </div>
         </div>
         <div class="card" style="width: 45em;">

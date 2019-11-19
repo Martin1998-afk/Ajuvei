@@ -10,6 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/detalles-anuncio',function(){
+return view('detalles-anuncio');
+});
 
 Route::resource('/service','ServiceController')->middleware('auth');
 

@@ -16,8 +16,9 @@ class PrestamistasController extends Controller
      */
     public function index()
     {
-       //$prestamistas = prestamistas::all();
-      // return View::make(prestamistas.index)->with('prestamistas',$prestamistas);
+       $prestamistas = prestamistas::all();
+       return view('prestamistas',['prestamistas'=>$prestamistas]);
+     // return View::make('prestamistas.index')->with('prestamistas',$prestamistas);
     }
 
     /**

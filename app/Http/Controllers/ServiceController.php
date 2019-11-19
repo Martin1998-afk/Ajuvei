@@ -65,10 +65,10 @@ class ServiceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(prestamistas $id)
     {
-        $service = prestamista::find($id);
-        return View::make("service.show")->with(compact('id'));
+        $prestamistas = prestamista::find($id);
+        return View::make("prestamistas.show")->with(compact('id'));
         //$s = DB::table('service_users')
           //  ->select('*')
             //->leftJoin('services', 'services.id', '=', 'service_users.service_id')

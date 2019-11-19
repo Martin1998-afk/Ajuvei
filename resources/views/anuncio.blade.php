@@ -38,7 +38,9 @@
       <br><textarea name="address" cols="auto" rows="4"></textarea><br>
       Codigo postal:<br>
       <input type="number" name="cp" min="5" max="10000"><br>
-      <input class="boton btn btn-primary" type="submit" value="Registrar"> <br>
+      <button onclick="redireccionar('/service')" class="boton btn btn-primary" type="submit" value="Registrar">
+           {{__('Publicar')}} 
+      </button><br>
     </form>
   </div>
 </div>

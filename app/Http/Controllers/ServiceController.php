@@ -17,11 +17,12 @@ class ServiceController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index ($prestamistas)
     {
         $services = Service::all();
         $users = User::all();
-        return view('servicios',['services' => $services,'users' => $users]);
+        $prestamistas = prestamistas::all();
+        return view('anuncio',['services' => $services, 'prestamistas' =>$prestamistas]);
         //
     }
 
@@ -67,8 +68,8 @@ class ServiceController extends Controller
      */
     public function show(prestamistas $id)
     {
-        $prestamistas = prestamista::find($id);
-        return View::make("prestamistas.show")->with(compact('id'));
+        $prestamistas = prestamistas::find($id);
+        return \View::make("prestamistas.show")->with(compact('id'));
         //$s = DB::table('service_users')
           //  ->select('*')
             //->leftJoin('services', 'services.id', '=', 'service_users.service_id')

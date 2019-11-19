@@ -74,7 +74,7 @@
     </header>
     <div id="personas-mapa">
         <div id="personas">
-        <form id = "contact" action="{{route('prestamistas.index')}}"method="POST">
+        <form id = "contact" href="{{ route('prestamistas.show') }}" method="POST">
           @csrf
           <div class="container">
             <div class="card">

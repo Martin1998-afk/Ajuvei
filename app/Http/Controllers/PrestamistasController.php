@@ -14,7 +14,7 @@ class PrestamistasController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($prestamistas)
     {
        $prestamistas = prestamistas::all();
        return view('prestamistas',['prestamistas'=>$prestamistas]);
@@ -26,9 +26,11 @@ class PrestamistasController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($service)
     {
-        //
+        $service = Service::all();
+        $prestamistas = prestamistas::all();
+        return view('anuncio',['services' => $service,'prestamistas' => $prestamistas]);
     }
 
     /**
@@ -58,8 +60,8 @@ class PrestamistasController extends Controller
      */
     public function show(prestamistas $id)
     {
-        $prestamistas = prestamista::find($id);
-        return View::make("prestamistas.show")->with(compact('id'));
+        $prestamistas = prestamista::all($id);
+        return View::make("servicios")->with(compact('id'));
     }
 
     /**

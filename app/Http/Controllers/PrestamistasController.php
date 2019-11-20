@@ -105,6 +105,6 @@ class PrestamistasController extends Controller
     {
         $prestamistas = prestamistas::find($id);
         $prestamistas ->delete();
-        return redirect('/');
+        return redirect('/anuncio');
     }
 }

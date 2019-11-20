@@ -53,7 +53,7 @@ class ServiceController extends Controller
         $service->address = $request->address;
         $service->cp = $request->cp;
         $service->save();
-        return view('/servicios');
+        return redirect('/servicios');
 
         $servuser = new ServiceUser();
         $servuser->service_id = $service->id;
@@ -111,8 +111,10 @@ class ServiceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($prestamistas,$id)
     {
-        //
+        $prestamistas = prestamistas::find($id);
+        $prestamistas->delete();
+        return redirect('/');
     }
 }

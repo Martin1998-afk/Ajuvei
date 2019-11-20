@@ -101,6 +101,10 @@
         <h5 class="card-title">{{$renglon->name}}</h5>
         <p class="card-text">{{$renglon->description}}} </p>
           <a href="{{url("/detalles-anuncio/{id}")}}" class="btn btn-primary">Go somewhere</a>
+          <form>
+          {{ csrf_field('DELETE') }}
+          <input class="btn btn-danger" type="submit" value="Eliminar Anuncio">
+          </form>
         </div>
       </div>
       @endforeach

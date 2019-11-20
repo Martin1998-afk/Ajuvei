@@ -77,13 +77,7 @@
         <div id="personas">
         <form id = "contact" action="" method="POST">
           @csrf
-          <div class="container">
-            <div class="card">
-            <div class="card-header"></div>
-            <div class="card-body"></div>
-            <div class="card-text"></div>
-            </div>
-          </div>
+         
         <div class="card" style="width: 45rem;">
             <div id="imagen-persona">
             <img src="{{ asset('css/images/pp2.jpg') }}" class="card-img-top" alt="...">

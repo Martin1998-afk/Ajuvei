@@ -14,10 +14,10 @@ class PrestamistasController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($prestamistas)
+    public function index ()
     {
-       $prestamistas = prestamistas::all();
-       return view('prestamistas',['prestamistas'=>$prestamistas]);
+        $prestamistas = prestamistas::all();
+      return View('servicios')->with('prestamistas',$prestamistas);
      // return View::make('prestamistas.index')->with('prestamistas',$prestamistas);
     }
 
@@ -49,7 +49,7 @@ class PrestamistasController extends Controller
         $prestamistas->cp = $request->cp;
         $prestamistas ->id = auth()->prestamista()->id;
         $prestamistas->save();
-        return view('/service');
+        return view('/servicios');
     }
 
     /**
@@ -70,9 +70,11 @@ class PrestamistasController extends Controller
      * @param  \App\prestamistas  $prestamistas
      * @return \Illuminate\Http\Response
      */
-    public function edit(prestamistas $prestamistas)
+    public function edit(prestamistas $prestamistas, $id)
     {
-        
+        $prestamistas = prestamistas::find($id);
+        return view('/detalles-anuncio',["prestamistas"=>$prestamistas,"id"=>$id,]);
+
     }
 
     /**
@@ -82,9 +84,15 @@ class PrestamistasController extends Controller
      * @param  \App\prestamistas  $prestamistas
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, prestamistas $prestamistas)
+    public function update(Request $request, prestamistas $prestamistas, $id)
     {
-        //
+        $prestamistas = prestamistas::find($id);
+        $prestamistas->description = $request ->description;
+        $prestamistas->address = $request ->address;
+        $prestamistas->email = $request->email;
+        $prestamistas->cp = $request->cp;
+        $prestamistas ->save();
+        
     }
 
     /**
@@ -93,8 +101,10 @@ class PrestamistasController extends Controller
      * @param  \App\prestamistas  $prestamistas
      * @return \Illuminate\Http\Response
      */
-    public function destroy(prestamistas $prestamistas)
+    public function destroy(prestamistas $prestamistas,$id)
     {
-        //
+        $prestamistas = prestamistas::find($id);
+        $prestamistas ->delete();
+        return redirect('/');
     }
 }

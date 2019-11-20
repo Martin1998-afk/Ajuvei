@@ -72,15 +72,16 @@
       </div>
 
     </header>
+
     <div id="personas-mapa">
         <div id="personas">
-        <form id = "contact" href="{{ route('prestamistas.show') }}" method="POST">
+        <form id = "contact" action="" method="POST">
           @csrf
           <div class="container">
             <div class="card">
-            <div class="card-header">{{$prestamistas->name}}</div>
+            <div class="card-header"></div>
             <div class="card-body"></div>
-            <div class="card-text">{{$prestamistas->description}}</div>
+            <div class="card-text"></div>
             </div>
           </div>
         <div class="card" style="width: 45rem;">
@@ -94,17 +95,22 @@
             <a href="{{ view('detalles-anuncio') }}" class="btn btn-primary">Go somewhere</a>
         </div>
         </div>
+        
+      @foreach ($prestamistas  as $renglon ) 
+            
+       
         <div class="card" style="width: 45em;">
         <div id="imagen-persona">
         <img src="{{ asset('css/images/pp1.jpg') }}" class="card-img-top" alt="...">
         <p>$$$</p>
         </div>
         <div class="card-body">
-          <h5 class="card-title">Fulano 2</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis suscipit reprehenderit numquam </p>
+        <h5 class="card-title">{{$renglon->name}}</h5>
+        <p class="card-text">{{$renglon->description}}} </p>
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>
+      @endforeach
       <div class="card" style="width: 45rem;">
         <div id="imagen-persona">
             <img src="{{ asset('css/images/pp.jpg') }}" class="card-img-top" alt="...">

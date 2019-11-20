@@ -124,7 +124,7 @@
                       @endforeach
                     </div>
                   </div>
-                  <a href="{{ route('service.index') }}" class="btn btn-primary btn-lg active" role="button"
+                  <a href="{{ route('anuncio.index') }}" class="btn btn-primary btn-lg active" role="button"
                     aria-pressed="true">Buscar</a>
                 </div>
               </div>

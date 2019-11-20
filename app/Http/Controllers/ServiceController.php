@@ -17,7 +17,7 @@ class ServiceController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index ($prestamistas)
+    public function index ()
     {
         $services = Service::all();
         $users = User::all();
@@ -53,6 +53,7 @@ class ServiceController extends Controller
         $service->address = $request->address;
         $service->cp = $request->cp;
         $service->save();
+        return view('/servicios');
 
         $servuser = new ServiceUser();
         $servuser->service_id = $service->id;
@@ -69,7 +70,7 @@ class ServiceController extends Controller
     public function show(prestamistas $id)
     {
         $prestamistas = prestamistas::find($id);
-        return \View::make("prestamistas.show")->with(compact('id'));
+        return \View::make("servicios")->with(compact('id'));
         //$s = DB::table('service_users')
           //  ->select('*')
             //->leftJoin('services', 'services.id', '=', 'service_users.service_id')

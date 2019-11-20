@@ -21,8 +21,8 @@ Route::get('/service/{prestamistas}','ServiceController@index');
 
 Auth::routes();
 
-Route::resource('/anuncio/{prestamistas}/prestamistas','PrestamistasController')->middleware('auth');
-//Route::get('/servicios/{id}','PrestamistasController@show');
+Route::resource('/anuncio','PrestamistasController')->middleware('auth');
+Route::get('/servicios/{id}','PrestamistasController@show');
 
 
 

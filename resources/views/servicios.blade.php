@@ -90,9 +90,8 @@
         </div>
         </div>
         
-      @foreach ($prestamistas  as $renglon ) 
-            
-       
+      @foreach ($prestamistas as $renglon ) 
+
         <div class="card" style="width: 45em;">
         <div id="imagen-persona">
         <img src="{{ asset('css/images/pp1.jpg') }}" class="card-img-top" alt="...">
@@ -101,7 +100,7 @@
         <div class="card-body">
         <h5 class="card-title">{{$renglon->name}}</h5>
         <p class="card-text">{{$renglon->description}}} </p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <a href="{{url("/detalles-anuncio/{id}")}}" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>
       @endforeach

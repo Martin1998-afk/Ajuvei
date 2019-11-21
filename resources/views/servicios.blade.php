@@ -86,21 +86,37 @@
         <div class="card-body">
         <h5 class="card-title">{{$renglon->name}}</h5>
         <p class="card-text">{{$renglon->description}}} </p>
-          <a href="{{url("/detalles-anuncio/{id}")}}" class="btn btn-primary">Go somewhere</a>
+          <a href="{{url("/detalles-anuncio/{id}")}}" class="btn btn-primary">Perfil</a>
 
-        <form id="contact "action="{{URL::to('/')}}/services/" method="POST">
-          <input class="btn btn-danger" type="submit" value="Eliminar Anuncio">
-          </form>
+          <form action="/anuncio/5" method="POST">
+            @method('DELETE')
+            @csrf
+        <button class="btn btn-danger" type="submit">Eliminar Anuncio</button>
+</form>
         </div>
       </div>
       @endforeach
       
           </form>
-    </div>
-    
-    <div class="mapa">
-        <iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118153.93589804425!2d-97.93952600110909!3d22.266225138406092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d7fd8bfcfe2d1f%3A0xc3189ac39db089e6!2sTampico%2C+Tamps.!5e0!3m2!1ses-419!2smx!4v1564684402103!5m2!1ses-419!2smx" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-    </div>
+    </div>   
+    <div id="map">
+      <script>
+      function iniciarMap() {
+        var coord = { lat: 22.2448406, lng: -97.8351974 };
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: coord
+        });
+        var marker = new google.maps.Marker({
+          position: coord,
+          map: map
+        });
+      }
+      </script>
+      <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap">
+      </script>
+     </div>
   </div>         
     <footer class="site-footer">
       <div class="container">

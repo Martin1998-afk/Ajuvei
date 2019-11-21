@@ -118,7 +118,7 @@ class ServiceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($prestamistas,$id)
+    public function destroy($id)
     {
        // DB::table('prestamistas')->where('id',$id)->delete();
         $prestamistas = prestamistas::find($id);

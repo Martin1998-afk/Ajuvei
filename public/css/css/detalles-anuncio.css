@@ -1,6 +1,7 @@
 body{
   margin: 0%;
   padding: 0%;
+  background-color: #e8e7e6;
 }
 .myimg{
     width:300px;
@@ -16,11 +17,31 @@ body{
   width: 100%;
 }
 .carousel-inner{ 
-    width:640px !important;
-    height:360px !important;
+  padding-right: 50px;
+  margin-top: 13px;
+    width:1270px !important;
+    height:600px !important;
 }
 
 #map{
   height: 500px;
-  width: 100%;
+  width: 1800px;
+  margin: 60px;
+  margin-right: 60px;
+  display: flex;
+  justify-items: center;
+  text-align: center;
+}
+
+.card {
+  margin-left: 100px;
+  height: 600px;
+
+}
+.card-body{
+  text-align: center;
+}
+
+.todo{
+  height: 600px;
 }

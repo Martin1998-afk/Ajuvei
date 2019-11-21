@@ -2,42 +2,90 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
+    <title>AJUVEI</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700&display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet" href="{{ asset('css/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/css/jquery.fancybox.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/css/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/css/aos.css') }}">
+  
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="{{ asset('css/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/css/style-personas.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/css/detalles-anuncio.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Detalle del servicio</title>
-  <link rel="stylesheet" href="detalles-anuncio.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
 </head>
 
-<body>
+<body style="background-color:#e8e7e6">
+    <header style="background-color:white" class="site-navbar js-sticky-header site-navbar-target" role="banner">
+
+        <div class="container">
+          <div class="row align-items-center position-relative">
+  
+  
+            <div class="site-logo">
+              <a href="{{ url('/') }}" class="text-black"><span class="text-primary">AJUVEI</a>
+            </div>
+  
+            <div class="col-12">
+              <nav class="site-navigation text-right ml-auto " role="navigation">
+  
+                <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+                  <li><a href="index.html" class="nav-link">Inicio</a></li>
+                  <li><a href="index.html" class="nav-link">¿Quienes somos?</a></li>
+  
+  
+                  <li>
+                    <a href="index.html" class="nav-link">Servicios</a>
+  
+                  </li>
+                  <button id="inicio-registro" type="button" class="btn btn-outline-primary">Registro/Iniciar</button>
+                </ul>
+  
+              </nav>
+  
+            </div>
+  
+            <div class="toggle-button d-inline-block d-lg-none"><a href="#"
+                class="site-menu-toggle py-5 js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+  
+          </div>
+        </div>
+  
+      </header>
   
   <div class="todo">
-    <div>
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top myimg" src="9.jpg" alt="Card image cap">
+      <div class="card">
+        <img class="card-img-top myimg" src="{{ asset('css/images/pp1.jpg') }}" alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
+          <h5 class="card-title">Prof. Adolfo Gibson Md</h5>
+          <p class="card-text">Possimus a neque tempora fugit. Nemo rerum ducimus doloremque quia vel dolore ut. Nemo veniam molestiae et in possimus facere. Non saepe sint sed alias.}</p>
           <a href="#" class="btn btn-primary">Actualizar</a>
          
         </div>
       </div>
-    </div>
   
     <div class="carousel">
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="d-block w-100 imgc" src="6.jpg" alt="First slide">
+            <img class="d-block w-100 imgc" src="{{ asset('css/images/tubo.jpg') }}" alt="First slide">
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100 imgc" src="7.jpg" alt="Second slide">
+            <img class="d-block w-100 imgc" src="{{ asset('css/images/tubo2.jpg') }}" alt="Second slide">
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100 imgc" src="8.jpg" alt="Third slide">
+            <img class="d-block w-100 imgc" src="{{ asset('css/images/tubo.jpg') }}" alt="Third slide">
           </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -56,7 +104,7 @@
       <div id="map">
         <script>
           function iniciarMap() {
-            var coord = { lat: -34.5956145, lng: -58.44319449 };
+            var coord = { lat: 22.2448406, lng: -97.8351974 };
             var map = new google.maps.Map(document.getElementById('map'), {
               zoom: 10,
               center: coord
@@ -71,191 +119,7 @@
           src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap">
         </script>
       </div>
-      <div class="comments">
-        <div class="comment_block">
-          <div class="create_new_comment">
-            <div class="user_avatar">
-              <img src="https://s3.amazonaws.com/uifaces/faces/twitter/BillSKenney/73.jpg">
-            </div><!-- the input field --><div class="input_comment">
-            <input type="text" placeholder="Join the conversation..">
-           </div>
-          </div>
-         <!-- new comment -->
-         <div class="new_comment">
-    
-          <!-- build comment -->
-           <ul class="user_comment">
-    
-             <!-- current #{user} avatar -->
-             <div class="user_avatar">
-               <img src="https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/73.jpg">
-             </div><!-- the comment body --><div class="comment_body">
-               <p>Gastropub cardigan jean shorts, kogi Godard PBR&B lo-fi locavore. Organic chillwave vinyl Neutra. Bushwick Helvetica cred freegan, crucifix Godard craft beer deep v mixtape cornhole Truffaut master cleanse pour-over Odd Future beard. Portland polaroid iPhone.</p>
-             </div>
-    
-             <!-- comments toolbar -->
-             <div class="comment_toolbar">
-    
-               <!-- inc. date and time -->
-               <div class="comment_details">
-                 <ul>
-                   <li><i class="fa fa-clock-o"></i> 13:94</li>
-                   <li><i class="fa fa-calendar"></i> 04/01/2015</li>
-                   <li><i class="fa fa-pencil"></i> <span class="user">John Smith</span></li>
-                 </ul>
-               </div><!-- inc. share/reply and love --><div class="comment_tools">
-                 <ul>
-                   <li><i class="fa fa-share-alt"></i></li>
-                   <li><i class="fa fa-reply"></i></li>
-                   <li><i class="fa fa-heart love"></i></li>
-                 </ul>
-               </div>
-    
-             </div>
-    
-             <!-- start user replies -->
-           <li>
-             
-             <!-- current #{user} avatar -->
-             <div class="user_avatar">
-               <img src="https://s3.amazonaws.com/uifaces/faces/twitter/manugamero/73.jpg">
-             </div><!-- the comment body --><div class="comment_body">
-               <p><div class="replied_to"><p><span class="user">John Smith:</span>Gastropub cardigan jean shorts, kogi Godard PBR&B lo-fi locavore. Organic chillwave vinyl Neutra. Bushwick Helvetica cred freegan, crucifix Godard craft beer deep v mixtape cornhole Truffaut master cleanse pour-over Odd Future beard. Portland polaroid iPhone.</p></div>That's exactly what I was thinking!</p>
-             </div>
-    
-             <!-- comments toolbar -->
-             <div class="comment_toolbar">
-    
-               <!-- inc. date and time -->
-               <div class="comment_details">
-                 <ul>
-                   <li><i class="fa fa-clock-o"></i> 14:52</li>
-                   <li><i class="fa fa-calendar"></i> 04/01/2015</li>
-                   <li><i class="fa fa-pencil"></i> <span class="user">Andrew Johnson</span></li>
-                 </ul>
-               </div><!-- inc. share/reply and love --><div class="comment_tools">
-                 <ul>
-                   <li><i class="fa fa-share-alt"></i></li>
-                   <li><i class="fa fa-reply"></i></li>
-                   <li><i class="fa fa-heart love"><span class="love_amt"> 4</span></i></li>
-                 </ul>
-               </div>
-    
-             </div>
-    
-    
-           </li>
-    
-             <!-- start user replies -->
-           <li>
-             
-             <!-- current #{user} avatar -->
-             <div class="user_avatar">
-               <img src="https://s3.amazonaws.com/uifaces/faces/twitter/ManikRathee/73.jpg">
-             </div><!-- the comment body --><div class="comment_body">
-               <p><div class="replied_to"><p><span class="user">John Smith:</span>Gastropub cardigan jean shorts, kogi Godard PBR&B lo-fi locavore. Organic chillwave vinyl Neutra. Bushwick Helvetica cred freegan, crucifix Godard craft beer deep v mixtape cornhole Truffaut master cleanse pour-over Odd Future beard. Portland polaroid iPhone.</p></div>Finally someone who actually gets it!<div class="replied_to"><p><span class="user">Andrew Johnson:</span>That's exactly what I was thinking!</p></div>That's awesome!</p>
-             </div>
-    
-             <!-- comments toolbar -->
-             <div class="comment_toolbar">
-    
-               <!-- inc. date and time -->
-               <div class="comment_details">
-                 <ul>
-                   <li><i class="fa fa-clock-o"></i> 14:59</li>
-                   <li><i class="fa fa-calendar"></i> 04/01/2015</li>
-                   <li><i class="fa fa-pencil"></i> <span class="user">Simon Gregor</span></li>
-                 </ul>
-               </div><!-- inc. share/reply and love --><div class="comment_tools">
-                 <ul>
-                   <li><i class="fa fa-share-alt"></i></li>
-                   <li><i class="fa fa-reply"></i></li>
-                   <li><i class="fa fa-heart love"><span class="love_amt"> 4039</span></i></li>
-                 </ul>
-               </div>
-    
-             </div>
-    
-    
-           </li>
-    
-           </ul>
-    
-         </div>
-    
-    <!-- new comment -->
-         <div class="new_comment">
-    
-          <!-- build comment -->
-           <ul class="user_comment">
-    
-             <!-- current #{user} avatar -->
-             <div class="user_avatar">
-               <img src="https://s3.amazonaws.com/uifaces/faces/twitter/kfriedson/73.jpg">
-             </div><!-- the comment body --><div class="comment_body">
-               <p>Gastropub cardigan jean shorts, kogi Godard PBR&B lo-fi locavore. Organic chillwave vinyl Neutra. Bushwick Helvetica cred freegan, crucifix Godard craft beer deep v mixtape cornhole Truffaut master cleanse pour-over Odd Future beard. Portland polaroid iPhone.</p>
-             </div>
-    
-             <!-- comments toolbar -->
-             <div class="comment_toolbar">
-    
-               <!-- inc. date and time -->
-               <div class="comment_details">
-                 <ul>
-                   <li><i class="fa fa-clock-o"></i> 13:94</li>
-                   <li><i class="fa fa-calendar"></i> 04/01/2015</li>
-                   <li><i class="fa fa-pencil"></i> <span class="user">Sarah Walkman</span></li>
-                 </ul>
-               </div><!-- inc. share/reply and love --><div class="comment_tools">
-                 <ul>
-                   <li><i class="fa fa-share-alt"></i></li>
-                   <li><i class="fa fa-reply"></i></li>
-                   <li><i class="fa fa-heart love"></i></li>
-                 </ul>
-               </div>
-    
-             </div>
-    
-             <!-- start user replies -->
-           <li>
-             
-             <!-- current #{user} avatar -->
-             <div class="user_avatar">
-               <img src="https://s3.amazonaws.com/uifaces/faces/twitter/cbillins/73.jpg">
-             </div><!-- the comment body --><div class="comment_body">
-               <p><div class="replied_to"><p><span class="user">Sarah Walkman:</span>Pork belly migas flexitarian messenger bag Brooklyn gluten-free. Tilde kitsch skateboard Helvetica, lumbersexual four loko direct trade pour-over. Cronut deep v keffiyeh cornhole food truck</p></div>I'm tired, does anybody know a good place to buy extra strength coffee?</p>
-             </div>
-    
-             <!-- comments toolbar -->
-             <div class="comment_toolbar">
-    
-               <!-- inc. date and time -->
-               <div class="comment_details">
-                 <ul>
-                   <li><i class="fa fa-clock-o"></i> 19:23</li>
-                   <li><i class="fa fa-calendar"></i> 14/01/2015</li>
-                   <li><i class="fa fa-pencil"></i> <span class="user">Blake Anderson</span></li>
-                 </ul>
-               </div><!-- inc. share/reply and love --><div class="comment_tools">
-                 <ul>
-                   <li><i class="fa fa-share-alt"></i></li>
-                   <li><i class="fa fa-reply"></i></li>
-                   <li><i class="fa fa-heart love"><span class="love_amt"> 12</span></i></li>
-                 </ul>
-               </div>
-    
-             </div>
-    
-    
-           </li>
-    
-           </ul>
-    
-         </div>
-    
-        </div>
-      </div>
-    </div>
+     </div>
   
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

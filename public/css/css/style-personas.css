@@ -18,10 +18,16 @@
     margin-top: 40px;
     display: flex;
 }
-.mapa{
+#map {
     width: 2000px;
+    height: 900px;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+     
 }
-.mapa iframe {
-    width: -webkit-fill-available;
-    height: -webkit-fill-available;
-   }
+
+body{
+    background-color: #e8e7e6;
+}
+   

@@ -90,7 +90,9 @@ class ServiceController extends Controller
      */
     public function edit($id)
     {
-        //
+        $prestamistas = prestamistas::find($id);
+        return view('/detalles-anuncio',["prestamistas"=>$prestamistas,"id"=>$id,]);
+
     }
 
     /**
@@ -102,7 +104,12 @@ class ServiceController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $prestamistas = prestamistas::find($id);
+        $prestamistas->description = $request ->description;
+        $prestamistas->address = $request ->address;
+        $prestamistas->email = $request->email;
+        $prestamistas->cp = $request->cp;
+        $prestamistas ->save();
     }
 
     /**
@@ -115,6 +122,6 @@ class ServiceController extends Controller
     {
         $prestamistas = prestamistas::find($id);
         $prestamistas->delete();
-        return redirect('/');
+        return redirect('/service');
     }
 }

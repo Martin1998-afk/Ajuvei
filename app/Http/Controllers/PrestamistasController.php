@@ -47,7 +47,7 @@ class PrestamistasController extends Controller
         $prestamistas->description = $request->description;
         $prestamistas->address = $request->address;
         $prestamistas->cp = $request->cp;
-        $prestamistas ->id = auth()->prestamista()->id;
+       //$prestamistas ->id = auth()->prestamista()->id;
         $prestamistas->save();
         return view('/servicios');
     }
@@ -105,6 +105,6 @@ class PrestamistasController extends Controller
     {
         $prestamistas = prestamistas::find($id);
         $prestamistas ->delete();
-        return redirect('/anuncio');
+        return redirect('/service');
     }
 }

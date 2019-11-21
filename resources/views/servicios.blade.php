@@ -78,17 +78,6 @@
         <form id = "contact" action="" method="POST">
           @csrf
          
-        <div class="card" style="width: 45rem;">
-            <div id="imagen-persona">
-            <img src="{{ asset('css/images/pp2.jpg') }}" class="card-img-top" alt="...">
-            <p>$$$</p>
-        </div>
-            <div class="card-body">
-            <h5 class="card-title">Fulano 1</h5>
-            <p class="card-text">Opos Oponimus  </p>
-            <a href="{{ view('detalles-anuncio') }}" class="btn btn-primary">Go somewhere</a>
-        </div>
-        </div>
         
       @foreach ($prestamistas as $renglon ) 
 
@@ -101,24 +90,15 @@
         <h5 class="card-title">{{$renglon->name}}</h5>
         <p class="card-text">{{$renglon->description}}} </p>
           <a href="{{url("/detalles-anuncio/{id}")}}" class="btn btn-primary">Go somewhere</a>
-          <form>
-          {{ csrf_field('DELETE') }}
-          <input class="btn btn-danger" type="submit" value="Eliminar  Anuncio">
+          
+        <form id="contact "action="{{url("/prestamistas/$prestamistas->id")}}"method="POST">
+                  {{method_field('DELETE')}}
+          <input class="btn btn-danger" type="submit" value="Eliminar Anuncio">
           </form>
         </div>
       </div>
       @endforeach
-      <div class="card" style="width: 45rem;">
-        <div id="imagen-persona">
-            <img src="{{ asset('css/images/pp.jpg') }}" class="card-img-top" alt="...">
-            <p>$$$</p>
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Fulano 3</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis suscipit reprehenderit numquam </p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
+      
           </form>
     </div>
     

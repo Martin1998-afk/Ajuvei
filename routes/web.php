@@ -17,12 +17,14 @@ return view('detalles-anuncio');
 Route::resource('/service','ServiceController')->middleware('auth');
 
 Route::get('/service/{id}', 'ServiceController@show');
+Route::get('/service/{id}','ServiceController@destroy');
 Route::get('/service/{prestamistas}','ServiceController@index');
 
 Auth::routes();
 
 Route::resource('/anuncio','PrestamistasController')->middleware('auth');
 Route::get('/servicios/{id}','PrestamistasController@show');
+Route::get('/prestamistas/{id}','PrestamistasController@destroy');
 
 
 

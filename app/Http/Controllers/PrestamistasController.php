@@ -49,7 +49,7 @@ class PrestamistasController extends Controller
         $prestamistas->cp = $request->cp;
        //$prestamistas ->id = auth()->prestamista()->id;
         $prestamistas->save();
-        return view('/servicios');
+        return redirect('/');
     }
 
     /**
@@ -103,8 +103,9 @@ class PrestamistasController extends Controller
      */
     public function destroy(prestamistas $prestamistas,$id)
     {
+        //DB::table('prestamistas')->where('id',$id)->delete();
         $prestamistas = prestamistas::find($id);
         $prestamistas ->delete();
-        return redirect('/service');
+        return view('/servicios');
     }
 }

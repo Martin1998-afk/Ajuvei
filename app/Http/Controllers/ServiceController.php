@@ -120,8 +120,9 @@ class ServiceController extends Controller
      */
     public function destroy($prestamistas,$id)
     {
+       // DB::table('prestamistas')->where('id',$id)->delete();
         $prestamistas = prestamistas::find($id);
         $prestamistas->delete();
-        return redirect('/service');
+        return view('/servicios');
     }
 }

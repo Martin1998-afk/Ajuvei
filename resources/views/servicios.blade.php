@@ -76,9 +76,6 @@
     <div id="personas-mapa">
         <div id="personas">
         <form id = "contact" action="" method="POST">
-          @csrf
-         
-        
       @foreach ($prestamistas as $renglon ) 
 
         <div class="card" style="width: 45em;">
@@ -90,9 +87,8 @@
         <h5 class="card-title">{{$renglon->name}}</h5>
         <p class="card-text">{{$renglon->description}}} </p>
           <a href="{{url("/detalles-anuncio/{id}")}}" class="btn btn-primary">Go somewhere</a>
-          
-        <form id="contact "action="{{url("/prestamistas/$prestamistas->id")}}"method="POST">
-                  {{method_field('DELETE')}}
+
+        <form id="contact "action="{{URL::to('/')}}/services/" method="POST">
           <input class="btn btn-danger" type="submit" value="Eliminar Anuncio">
           </form>
         </div>
